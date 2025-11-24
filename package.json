@@ -1,0 +1,27 @@
+{
+  "name": "consumer-open-music-api-new",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/consumer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lazuardh/consumer-open-music-api-new.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lazuardh/consumer-open-music-api-new/issues"
+  },
+  "homepage": "https://github.com/lazuardh/consumer-open-music-api-new#readme",
+  "dependencies": {
+    "amqplib": "^0.10.9",
+    "dotenv": "^17.2.3",
+    "nodemailer": "^7.0.10",
+    "pg": "^8.16.3"
+  }
+}
