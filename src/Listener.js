@@ -8,11 +8,11 @@ class Listener {
 
     async listen(message) {
         try {
-            const { userId, targetEmail } = JSON.parse(message.content.toString());
+            const { playlistId, targetEmail } = JSON.parse(message.content.toString());
 
-            const playlists = await this._playlistsService.getExportPlaylists(userId);
-            const result = await this._mailSender.sendEmail(targetEmail, JSON.stringify(playlists));
-            console.log(result);
+            const exported = await this._playlistsService.getExportPlaylists(playlistId);
+            await this._mailSender.sendEmail(targetEmail, JSON.stringify(exported));
+            console.log('Email terkirim ke:', targetEmail);
         } catch (error) {
             console.log(error);
         }
